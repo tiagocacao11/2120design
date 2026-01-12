@@ -2,8 +2,33 @@
   {
     "slug": "cartoes-de-visita",
     "nome": "Cartões de Visita",
-    "descricao": "Cartões personalizados — ideais para profissionais e marcas.",
-    "precoNota": "desde X€ (depende de quantidade e acabamentos)",
+    "descricao": "Cartões profissionais, com acabamentos à escolha.",
+    "precoNota": "desde 15€",
+    "imagem": "/produtos/Cart%C3%B5es%20visita.png",
     "destaque": true
+  },
+  {
+    "slug": "caneca-personalizada",
+    "nome": "Caneca Personalizada",
+    "descricao": "Canecas com logotipo, frases ou design à medida.",
+    "precoNota": "desde 9€",
+    "imagem": "/produtos/Caneca.png",
+    "destaque": true
+  },
+  {
+    "slug": "sacola-tote-bag",
+    "nome": "Sacola / Tote Bag",
+    "descricao": "Tote bag personalizada — ideal para brindes e marcas.",
+    "precoNota": "desde 12€",
+    "imagem": "/produtos/Sacola.png",
+    "destaque": false
+  },
+  {
+    "slug": "tela-canvas",
+    "nome": "Tela (Canvas)",
+    "descricao": "Impressão em tela para decoração ou oferta.",
+    "precoNota": "desde 18€",
+    "imagem": "/produtos/Tela.png",
+    "destaque": false
   }
 ]
