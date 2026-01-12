@@ -1,0 +1,12 @@
+---
+const { p } = Astro.props;
+---
+<article class="card">
+  <h3 style="margin:0 0 6px 0;">{p.nome}</h3>
+  <p class="muted" style="margin:0 0 10px 0;">{p.descricao}</p>
+  <p style="margin:0 0 14px 0;"><small class="muted">{p.precoNota}</small></p>
+  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+    <a class="btn primary" href={"/encomendar/?produto=" + encodeURIComponent(p.nome)}>Pedir</a>
+    <a class="btn" href="/produtos/">Ver mais</a>
+  </div>
+</article>

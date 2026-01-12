@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import produtos from "../../data/produtos.json";
+import ProductCard from "../../components/ProductCard.astro";
+---
+<BaseLayout title="Produtos — 2120 design">
+  <h1 style="margin:0 0 8px 0;">Produtos</h1>
+  <p class="muted" style="margin:0 0 14px 0;">Começamos com o essencial e vamos adicionando mais.</p>
+
+  <div class="grid">
+    {produtos.map(p => <ProductCard p={p} />)}
+  </div>
+</BaseLayout>

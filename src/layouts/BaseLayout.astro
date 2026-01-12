@@ -1,0 +1,66 @@
+---
+const { title = "2120 design" } = Astro.props;
+---
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="Produtos personalizados pela 2120 design — cartões de visita e mais." />
+    <style>
+      :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      body { margin: 0; background: #fff; color: #111; }
+      a { color: inherit; text-decoration: none; }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+      header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 18px 0; }
+      nav { display:flex; gap:12px; flex-wrap:wrap; }
+      .btn { display:inline-block; padding:10px 14px; border:1px solid #ddd; border-radius:12px; }
+      .btn.primary { border-color:#111; background:#111; color:#fff; }
+      .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
+      .card { border:1px solid #eee; border-radius:16px; padding:16px; background:#fff; }
+      .muted { color:#666; }
+      input, select, textarea { width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:12px; font: inherit; }
+      label { display:block; margin: 12px 0 6px; }
+      fieldset { border:1px solid #eee; border-radius:16px; padding:12px 12px; margin: 12px 0; }
+      legend { padding: 0 8px; }
+      footer { border-top:1px solid #eee; margin-top: 28px; padding: 18px 0; }
+      .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.brand img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+.brand span { font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a href="/" class="btn"><strong>2120</strong> design</a>
+        <nav>
+          <a class="btn" href="/produtos/">Produtos</a>
+          <a class="btn" href="/encomendar/">Encomendar</a>
+        </nav>
+      </header>
+<a href="/" class="brand">
+  <img src="/logo-2120.png" alt="2120 design" />
+  <span>2120 design</span>
+</a>
+      <main>
+        <slot />
+      </main>
+
+      <footer class="muted">
+        <small>© {new Date().getFullYear()} 2120 design · Pagamento por transferência bancária (detalhes após confirmação do pedido)</small>
+      </footer>
+    </div>
+  </body>
+</html>

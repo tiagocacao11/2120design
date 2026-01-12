@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import produtos from "../data/produtos.json";
+import ProductCard from "../components/ProductCard.astro";
+
+const destaques = produtos.filter(p => p.destaque);
+---
+<BaseLayout title="2120 design — Produtos personalizados">
+  <section class="card">
+    <h1 style="margin:0 0 8px 0;">Produtos personalizados pela 2120 design</h1>
+    <p class="muted" style="margin:0 0 14px 0;">
+      Faz o teu pedido pelo site. Eu confirmo detalhes + orçamento e envio os dados para pagamento por transferência.
+    </p>
+    <a class="btn primary" href="/encomendar/">Fazer pedido</a>
+<a class="btn" href="/produtos/" style="margin-left:10px;">Ver produtos</a>
+  </section>
+
+  <h2 style="margin:22px 0 12px 0;">Destaques</h2>
+  <div class="grid">
+    {destaques.map(p => <ProductCard p={p} />)}
+  </div>
+</BaseLayout>
